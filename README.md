@@ -6,10 +6,10 @@
 
 # Objetivos
 
-- Aprender cuándo utilizar Programación Dinámica y sus beneficios.
-- Entender la diferencia entre programas deterministas y estocásticos.
-- Aprender a utilizar la Programación estocástica.
-- Aprender a crear simulaciones computacionales válidas.
+-   Aprender cuándo utilizar Programación Dinámica y sus beneficios.
+-   Entender la diferencia entre programas deterministas y estocásticos.
+-   Aprender a utilizar la Programación estocástica.
+-   Aprender a crear simulaciones computacionales válidas.
 
 # **Programación Dinámica**
 
@@ -17,7 +17,7 @@
 
 En la década de los 50s Richard Bellman necesitaba financiamiento del gobierno para poder continuar con sus investigaciones, por lo que necesitaba un nombre rimbombante para que no fueran capaz de rechazar su solicitud, por lo que eligió programación dinámica. Las propias palabras de Bellman fueron
 
-*"[El nombre] Programación Dinámica se escogió para esconder a patrocinadores gubernamentales el hecho que en realidad estaba haciendo Matemáticas. La frase Programación Dinámica es algo que ningún congresista puede oponerse." - Richard Bellman.*
+_"[El nombre] Programación Dinámica se escogió para esconder a patrocinadores gubernamentales el hecho que en realidad estaba haciendo Matemáticas. La frase Programación Dinámica es algo que ningún congresista puede oponerse." - Richard Bellman._
 
 Entonces sabiendo que **Programación Dinámica** no esta relacionada con su nombre, lo cierto es que si es una de las técnicas mas poderosas para poder optimizar cierto tipo de problemas.
 
@@ -29,11 +29,11 @@ Una técnica para obtener una alta velocidad en nuestro programa es la **Memori
 
 ### Optimización de Fibonacci
 
-La serie de *Fibonacci* se representa como Fn = Fn-1 + Fn-2 y es muy simple implementarla de forma recursiva en código. Sin embargo, es muy ineficiente hacerlo simplemente recursivo, ya que repetimos varias veces cómputos idénticos. Esto se puede ver en la imagen:
+La serie de _Fibonacci_ se representa como Fn = Fn-1 + Fn-2 y es muy simple implementarla de forma recursiva en código. Sin embargo, es muy ineficiente hacerlo simplemente recursivo, ya que repetimos varias veces cómputos idénticos. Esto se puede ver en la imagen:
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled.png)
+![Fibonacci](./assets/0.png)
 
-Para **optimizar** la forma recursiva del algoritmo de *Fibonacci* podemos usar el dict memo para que el algoritmo vaya guardando en el los calculos que va realizando y asi no tener que repetirlos:
+Para **optimizar** la forma recursiva del algoritmo de _Fibonacci_ podemos usar el dict memo para que el algoritmo vaya guardando en el los calculos que va realizando y asi no tener que repetirlos:
 
 ```python
 def fibonacci_dinamico(n, memo = {}):
@@ -60,13 +60,13 @@ Son un tipo de simulación que elige aleatoriamente una decisión dentro de un c
 
 Consiste en la implementación de objetos para modelar un campo coordenado donde un borracho camina aleatoriamente en diferentes direcciones. El movimiento del borracho consiste en elegir aleatoriamente si se mueve para x positivo, y positivo, x negativo o y negativo en cada paso que da. Ej:
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%201.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%201.png)
+![](./assets/1.png)
 
 Se puede ver cómo a medida que el borracho aumenta la cantidad de pasos por caminata, aunque estos son aleatorios la distancia media por caminata tienen a aumentar si se hacen más simulaciones.
 
 En la siguiente imagen se puede ver uno de los caminos aleatorios
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%202.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%202.png)
+![](./assets/2.png)
 
 # Programas Estocásticos
 
@@ -78,31 +78,31 @@ La **programación estocástica** permite introducir aleatoriedad a nuestros p
 
 ### Cálculo de Probabilidades
 
-La **probabilidad** es una medida de la certidumbre asociada a un evento o suceso futuro y suele expresarse como un número entre 0 y 1. 
+La **probabilidad** es una medida de la certidumbre asociada a un evento o suceso futuro y suele expresarse como un número entre 0 y 1.
 
 Al hablar de **probabilidad** preguntamos qué fracción de todos los posibles eventos tiene la propiedad que buscamos, por eso es importante poder calcular todas las posibilidades de un evento para entender su probabilidad. La probabilidad de que un evento suceda más la probabilidad de el que el mismo evento no suceda siempre es 1.
 
-- Ley del complemento:
-    - P(A) + P(~A) = 1
-- Ley multiplicativa:
-    - P(A y B) = P(A) * P(B)
-- Ley aditiva:
-    - Mutuamente exclusivos: P(A o B) = P(A) + P(B)
-    - No exclusivos: P(A o B) = P(A) + P(B) - P(A y B)
+-   Ley del complemento:
+    -   P(A) + P(~A) = 1
+-   Ley multiplicativa:
+    -   P(A y B) = P(A) \* P(B)
+-   Ley aditiva:
+    -   Mutuamente exclusivos: P(A o B) = P(A) + P(B)
+    -   No exclusivos: P(A o B) = P(A) + P(B) - P(A y B)
 
 ### Inferencia estadística
 
 Las técnicas de la **inferencia estadística** nos permiten inferir/concluir las propiedades de una población a partir de una muestra aleatoria.
 
-*"El principio guía de la **inferencia estadística** es que una muestra aleatoria tiende a exhibir las mismas propiedades que la población de la cual fue extraída" - John Guttag*
+_"El principio guía de la **inferencia estadística** es que una muestra aleatoria tiende a exhibir las mismas propiedades que la población de la cual fue extraída" - John Guttag_
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%203.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%203.png)
+![](./assets/3.png)
 
 ### Ley de los grandes números
 
-Podemos observar con **la ley de los grandes números** que en pruebas independientes repetidas con la misma probabilidad *P* de un resultado, la fracción de desviaciones de *P* converge  a cero conforme la cantidad de pruebas se acerca al infinito.
+Podemos observar con **la ley de los grandes números** que en pruebas independientes repetidas con la misma probabilidad _P_ de un resultado, la fracción de desviaciones de _P_ converge a cero conforme la cantidad de pruebas se acerca al infinito.
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%204.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%204.png)
+![](./assets/4.png)
 
 Como se puede ver a mayor número de simulaciones la probabilidad se va acercando a 0,166666
 
@@ -110,13 +110,13 @@ Como se puede ver a mayor número de simulaciones la probabilidad se va acercand
 
 La **falacia del apostador** señala que después de un evento extremo, ocurrirán eventos menos extremos para nivelar la media. Es una falsa creencia, lo que realmente ocurre es la regresión a la media:
 
-La ***regresión a la media*** señala que después de un evento aleatorio extremo, el siguiente evento será menos extremo.
+La **_regresión a la media_** señala que después de un evento aleatorio extremo, el siguiente evento será menos extremo.
 
 ### Media
 
 La **media** es una medida de tendencia central, comúnmente conocido como promedio. La media de una población se denota con el símbolo μ y la media de una muestra se define con X̄.
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%205.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%205.png)
+![](./assets/5.png)
 
 Calcular la media de un conjunto de números en python:
 
@@ -128,13 +128,13 @@ def media(X):
 
 Se puede ver el concepto de la **ley de los grandes números:**
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%206.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%206.png)
+![](./assets/6.png)
 
 ### Varianza y Desviación Estándar
 
 La **varianza** mide qué tan propagados se encuentran un conjunto de valores aleatorios de su media. Mientras que la media nos da una idea de donde se encuentran los valores, **la varianza** nos dice que tan dispersos se encuentran. La varianza siempre debe entenderse con respecto a la media.
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%207.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%207.png)
+![](./assets/7.png)
 
 La **desviación estándar** es la raíz cuadrada de la varianza, o en otras palabras, sigma (σ) es la raíz cuadrada del valor promedio de (X - μ)2. Nos permite entender, también, la propagación y se debe entender siempre relacionado con la media.
 
@@ -163,15 +163,15 @@ def desviacion_estandar(X):
 
 En una de las distribuciones más recurrentes en cualquier ámbito. Se define completamente por su media y su desviación estándar. Permite calcular intervalos de confianza con la **regla empírica**.
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%208.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%208.png)
+![](./assets/8.png)
 
 ### Regla empírica
 
 También conocida como la regla 68-95-99,7. Señala cuál es la dispersión de los datos en una distribución normal a uno, dos y tres sigmas.
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%209.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%209.png)
+![](./assets/9.png)
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2010.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2010.png)
+![](./assets/10.png)
 
 # Simulaciones de Montecarlo
 
@@ -183,9 +183,9 @@ Son simulaciones que permiten predecir el resultado de un problema y convertir p
 
 En el código, en el path del curso, calculamos la probabilidad de obtener un par en diferentes tamaños de mano:
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2011.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2011.png)
+![](./assets/11.png)
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2012.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2012.png)
+![](./assets/12.png)
 
 ### Cálculo de Pi
 
@@ -210,8 +210,8 @@ Media (pi): 3.1416 Sigma: 0.00457 Puntos: 128000
 
 Se conoce como **muestreo** a la técnica para la selección de una muestra a partir de una población estadística. La validez de usar muestras para representar una población se basa en el principio de la **inferencia estadística.**
 
-- En un **muestreo aleatorio** cualquier miembro de la población tiene la misma probabilidad de ser escogido.
-- En un **muestreo estratificado** tomamos en consideración las características de la población para dividirla en subgrupos y luego tomamos muestras de cada subgrupo, esto en algunos casos incrementa la probabilidad de que el muestreo sea representativo de la población.
+-   En un **muestreo aleatorio** cualquier miembro de la población tiene la misma probabilidad de ser escogido.
+-   En un **muestreo estratificado** tomamos en consideración las características de la población para dividirla en subgrupos y luego tomamos muestras de cada subgrupo, esto en algunos casos incrementa la probabilidad de que el muestreo sea representativo de la población.
 
 ### Teorema del límite central
 
@@ -223,9 +223,9 @@ Es uno de los teoremas **más importantes** de la es*t*adística. Permite entend
 
 Los **datos experimentales** son aquellos que se generan a través del **método científico**.
 
-- Con el **método científico** es necesario comenzar con una *teoría* o *hipótesis* sobre el resultado al que se quiere llegar.
-- Basado en la *hipótesis* se debe crear un experimento para **validad** o **falsear** la *hipótesis*.
-- Se **valida** o **falsea** una *hipótesis* midiendo la diferencia entre las mediciones experimentales y aquellas mediciones predichas por la *hipótesis*.
+-   Con el **método científico** es necesario comenzar con una *teoría* o *hipótesis* sobre el resultado al que se quiere llegar.
+-   Basado en la *hipótesis* se debe crear un experimento para **validad** o **falsear** la *hipótesis*.
+-   Se **valida** o **falsea** una *hipótesis* midiendo la diferencia entre las mediciones experimentales y aquellas mediciones predichas por la *hipótesis*.
 
 ### Regresión Lineal
 
@@ -235,10 +235,10 @@ La **regresión lineal** nos permite aproximar una funciona a un conjunto de dat
 
 # Conclusiones
 
-- La **programación dinámica** permite optimizar problemas que tienen subestructura óptima y subproblemas empalmados.
-- Las computadoras pueden resolver problemas **determinísticos** y **estocásticos.**
-- Podemos generar **simulaciones computacionales** para responder preguntas del mundo real.
+-   La **programación dinámica** permite optimizar problemas que tienen subestructura óptima y subproblemas empalmados.
+-   Las computadoras pueden resolver problemas **determinísticos** y **estocásticos.**
+-   Podemos generar **simulaciones computacionales** para responder preguntas del mundo real.
 
-![Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2013.png](Curso%20de%20programacio%CC%81n%20estoca%CC%81stica%20y%20dina%CC%81mica%2092a1a235c51141d7b67422133635038a/Untitled%2013.png)
+![](./assets/13.png)
 
 /
